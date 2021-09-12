@@ -47,3 +47,31 @@ E-mail: tatyriana@yandex.ru
 - Bachelor's Degree Yaroslavl State Technical University (YSTU)
 
 ---
+
+## Experience
+
+- Experience working with HTML and flexible CSS
+- Understanding and experience to style and apply design to web pages using CSS
+- Knowledge of latest open standards such as CSS3 and HTML5
+- 0-1 years experience developing websites and applications
+- Experience working with javaScript
+- Experience in solution algorithmic tasks
+- Experience with a version control system (GIT)
+- Experience working with Photoshop
+- Experience to work within tight deadlines and changing priorities
+- Excellent communication skills with the ability to effectively interface with all levels and departments on a formal, informal, written, and verbal basis
+- Self-motivated, goal-oriented, and able to work in a team environment
+
+---
+
+## Sample code
+
+```
+decodeMorse = function(morseCode){
+  return morseCode
+    .trim()
+    .split('   ')
+    .map(word => word.split(' ').map(letter => letter = MORSE_CODE[letter]).join(''))
+    .join(' ')
+}
+```
