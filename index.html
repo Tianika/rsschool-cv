@@ -14,27 +14,31 @@
           <div class="header-title">
             <h1 class="header-name">TATYANA TSYBINA</h1>
             <h2 class="header-subtitle">Frontend-developer</h2>
+            <div class="header-contacts">
+              <ul class="contacts-list">
+                <li>
+                  Phone Number:
+                  <a href="tel:+79012755996">+7 901 275 59 96</a>
+                </li>
+                <li>
+                  Address:
+                  <a href="https://goo.gl/maps/1f4i3Lkp4b6Sahns7"
+                    >Yaroslavl Russia</a
+                  >
+                </li>
+                <li>
+                  E-mail:
+                  <a href="mailto:tatyriana@yandex.ru">Tatyana Tsybina</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="header-photo">
-            <img src="./img/IMG_20210201_132206.jpg" alt="photo" />
-          </div>
-          <div class="header-contacts">
-            <ul class="contacts-list">
-              <li>
-                Phone Number:
-                <a href="tel:+79012755996">+7 901 275 59 96</a>
-              </li>
-              <li>
-                Address:
-                <a href="https://goo.gl/maps/1f4i3Lkp4b6Sahns7"
-                  >Yaroslavl Russia</a
-                >
-              </li>
-              <li>
-                E-mail:
-                <a href="mailto:tatyriana@yandex.ru">Tatyana Tsybina</a>
-              </li>
-            </ul>
+            <img
+              class="photo"
+              src="./img/IMG_20210201_132206.jpg"
+              alt="photo"
+            />
           </div>
         </header>
         <section class="about">
@@ -49,8 +53,114 @@
             verbally and in writing.
           </div>
         </section>
+        <section class="experience">
+          <h3 class="experience-title title">Experience</h3>
+          <div class="experience-text text">
+            <ul>
+              <li>Experience working with HTML and flexible CSS</li>
+              <li>
+                Understanding and experience to style and apply design to web
+                pages using CSS
+              </li>
+              <li>Knowledge of latest open standards such as CSS3 and HTML5</li>
+              <li>0-1 years experience developing websites and applications</li>
+              <li>Experience working with JavaScript</li>
+              <li>Experience in solution algorithmic tasks</li>
+              <li>Experience with a version control system (GIT)</li>
+              <li>Experience working with Photoshop</li>
+              <li>
+                Experience to work within tight deadlines and changing
+                priorities
+              </li>
+              <li>
+                Excellent communication skills with the ability to effectively
+                interface with all levels and departments on a formal, informal,
+                written, and verbal basis
+              </li>
+              <li>
+                Self-motivated, goal-oriented, and able to work in a team
+                environment
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="skills">
+          <h3 class="skills-title title">Skills</h3>
+          <div class="skills-text text">
+            <ul class="list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Git</li>
+              <li>Photoshop</li>
+              <li>Figma</li>
+            </ul>
+          </div>
+        </section>
+        <section class="education">
+          <div class="study">
+            <h3 class="study title">Education</h3>
+            <div class="study text">
+              <ul class="list">
+                <li>Sololearn courses: HTML, CSS, JavaScript, SQL</li>
+                <li>Code-basics courses: HTML, CSS</li>
+                <li>Specialist Degree Yaroslavl State Technical University</li>
+              </ul>
+            </div>
+          </div>
+          <div class="languages">
+            <h3 class="languages title">Languages</h3>
+            <div class="languages text">
+              <ul class="list">
+                <li>Russian: Native</li>
+                <li>English: Pre-Intermediate</li>
+                <li>Spanish: Beginner</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="projects">
+          <h3 class="projects-title title">My projects</h3>
+          <div class="projects-text text">Project here</div>
+        </section>
+        <section class="sample-code">
+          <h3 class="sample-code-title title">Sample code</h3>
+          <div class="sample-code-text text">
+            <pre> 
+              <code>
+                function mxdiflg(a1, a2) {
+                  let max = -1
+                  
+                  a1.forEach(a => {
+                    a2.forEach(b => {
+                      let dif = Math.abs(a.length - b.length)
+                      dif > max ? max = dif : max
+                    })
+                  })
+                   return max 
+                }
+              </code>
+            </pre>
+          </div>
+        </section>
       </div>
     </main>
+    <footer class="footer">
+      <div>
+        <a href="https://github.com/Tianika" class="github">GitHub</a>
+      </div>
+      <div>
+        <p>2021</p>
+      </div>
+      <div>
+        <a href="https://rs.school/js/" class="link"
+          ><img
+            src="https://rs.school/images/rs_school_js.svg"
+            alt="logo"
+            class="logo"
+        /></a>
+      </div>
+    </footer>
     <script src="./index.js"></script>
   </body>
 </html>
