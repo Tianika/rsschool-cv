@@ -34,8 +34,14 @@ body {
   line-height: 1;
   font-weight: 400;
   font-size: 14px;
-  color: #000000;
+  font-family: Lato;
+  scroll-behavior: smooth;
+  --color1: #36caa3;
+  --color2: #f5f8e2;
+  /*#a3070b #fffcf5*/
+  --colorWhite: #ffffff;
 }
+
 .wrapper {
   min-height: 100%;
   overflow: hidden;
@@ -43,58 +49,181 @@ body {
 
 .container {
   max-width: 1230px;
-  padding: 0 15px;
   margin: 0 auto;
-  box-shadow: 5px 5px 10px rgba(64, 82, 73, 0.5);
+  background-color: var(--color2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
+    inset 10em 8em var(--color1, 0.3);
+}
+/*-----------MENU--------*/
+.main-menu {
+  color: var(--colorWhite);
+}
+.menu-list {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  padding: 25px 10px;
+}
+.menu-list li {
+  cursor: pointer;
+  text-align: center;
+  width: 15%;
+  padding: 20px 10px;
+  transition: 0.4s ease;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.menu-list li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
+/*----------HEADER------------*/
 .header {
   display: flex;
-  background-color: rgb(255, 255, 255);
   align-items: center;
-  flex-wrap: wrap;
 }
 .header-title {
-  text-align: right;
-  flex: 1 1 20%;
+  text-align: center;
+  flex: 1 1 auto;
 }
 .header-name {
-  font-size: 50px;
-  padding: 50px 30px;
+  font-size: 60px;
+  padding: 20px 0;
+  font-weight: 700;
+}
+.header-name::before {
+  content: 'T';
+  font-size: 100px;
+  color: var(--color1);
 }
 .header-subtitle {
-  font-size: 40px;
-  padding: 30px;
+  font-size: 50px;
+  font-style: italic;
+  padding: 10px;
+  color: var(--color1);
 }
 .header-photo {
-  display: flex;
-  justify-content: center;
-  padding: 20px;
-  background-color: rgb(64, 82, 73);
-  width: 30%;
+  position: relative;
+  top: -20px;
+  padding: 30px;
+  background-color: var(--color1);
+  width: 35%;
+  min-height: 300px;
+}
+.photo {
+  position: absolute;
+  top: 60px;
+  left: 110px;
+  width: 60%;
+  /*filter: grayscale(1) contrast(1.5);*/
 }
 img {
-  width: 80%;
-  border-radius: 100%;
-  filter: contrast(120%) grayscale(100%) brightness(110%);
 }
 .header-contacts {
   margin: auto 15px;
+  padding: 20px;
 }
 .contacts-list {
-  font-size: 24px;
-  line-height: 200%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  line-height: 180%;
 }
+.contacts-list li {
+  display: flex;
+  transition: 0.2s ease;
+}
+.contacts-list li:hover {
+  transform: scale(1.2);
+}
+
+.contant-icon {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  object-fit: fill;
+  background-repeat: no-repeat;
+}
+.telephone {
+  background-image: url(./png/tel.png);
+}
+.map {
+  background-image: url(./png/address.jpg);
+}
+.mail {
+  background-image: url(./png/mail.png);
+}
+
+/*-----------ABOUT------------*/
 .about-title {
 }
 .title {
-  text-align: center;
-  margin: 20px 0;
-  font-size: 36px;
+  text-align: left;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 2.5px;
+  padding: 15px 15px;
+  padding-left: 100px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  transition: 0.2s ease;
+}
+.title::first-letter {
+  color: var(--colorWhite);
+  font-size: 55px;
+  padding-right: 5px;
+}
+.title:hover {
+  font-weight: 700;
 }
 .about-text {
 }
 .text {
   margin: 0 40px;
   font-size: 24px;
+  line-height: 150%;
+  padding: 5px 20px;
+  padding-left: 105px;
+}
+.list {
+  position: relative;
+}
+.list li {
+}
+.list li::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./png/free-icon-checkmark-outline-54346.png);
+  background-size: 100%;
+  margin-right: 15px;
+}
+
+/*-----------FOOTER---------*/
+.footer {
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  font-size: 20px;
+  color: var(--colorWhite);
+  transition: 0.2s ease;
+}
+.footer-container div:hover {
+  transform: scale(1.2);
+}
+.github {
+}
+.year {
+}
+.rsschool-link {
+}
+.logo {
+  width: 60px;
+  height: 60px;
 }

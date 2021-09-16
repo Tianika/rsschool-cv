@@ -5,43 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css"
+    />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad()
+    </script>
     <title>CV</title>
   </head>
   <body>
     <main class="wrapper">
       <div class="container">
+        <div class="main-menu">
+          <ul class="menu-list">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </div>
         <header class="header">
+          <div class="header-photo">
+            <img class="photo" src="./img/photo1.jpg" alt="photo" />
+          </div>
           <div class="header-title">
-            <h1 class="header-name">TATYANA TSYBINA</h1>
-            <h2 class="header-subtitle">Frontend-developer</h2>
+            <h1 class="header-name">ATYANA TSYBINA</h1>
+            <h2 class="header-subtitle">Frontend developer</h2>
             <div class="header-contacts">
               <ul class="contacts-list">
                 <li>
-                  Phone Number:
+                  <div class="contant-icon telephone"></div>
                   <a href="tel:+79012755996">+7 901 275 59 96</a>
                 </li>
                 <li>
-                  Address:
+                  <div class="contant-icon map"></div>
                   <a href="https://goo.gl/maps/1f4i3Lkp4b6Sahns7"
                     >Yaroslavl Russia</a
                   >
                 </li>
                 <li>
-                  E-mail:
+                  <div class="contant-icon mail"></div>
                   <a href="mailto:tatyriana@yandex.ru">Tatyana Tsybina</a>
                 </li>
               </ul>
             </div>
           </div>
-          <div class="header-photo">
-            <img
-              class="photo"
-              src="./img/IMG_20210201_132206.jpg"
-              alt="photo"
-            />
-          </div>
         </header>
-        <section class="about">
+        <section class="about" id="about">
           <h3 class="about-title title">About me</h3>
           <div class="about-text text">
             I desire to learn and improve skills. I have a passion for
@@ -53,7 +72,7 @@
             verbally and in writing.
           </div>
         </section>
-        <section class="experience">
+        <section class="experience" id="experience">
           <h3 class="experience-title title">Experience</h3>
           <div class="experience-text text">
             <ul>
@@ -84,7 +103,7 @@
             </ul>
           </div>
         </section>
-        <section class="skills">
+        <section class="skills" id="skills">
           <h3 class="skills-title title">Skills</h3>
           <div class="skills-text text">
             <ul class="list">
@@ -97,14 +116,14 @@
             </ul>
           </div>
         </section>
-        <section class="education">
+        <section class="education" id="education">
           <div class="study">
             <h3 class="study title">Education</h3>
             <div class="study text">
               <ul class="list">
                 <li>Sololearn courses: HTML, CSS, JavaScript, SQL</li>
                 <li>Code-basics courses: HTML, CSS</li>
-                <li>Specialist Degree Yaroslavl State Technical University</li>
+                <li>Bachelor's Degree Yaroslavl State Technical University</li>
               </ul>
             </div>
           </div>
@@ -119,15 +138,15 @@
             </div>
           </div>
         </section>
-        <section class="projects">
-          <h3 class="projects-title title">My projects</h3>
+        <section class="projects" id="projects">
+          <h3 class="projects-title title">Projects</h3>
           <div class="projects-text text">Project here</div>
         </section>
         <section class="sample-code">
           <h3 class="sample-code-title title">Sample code</h3>
           <div class="sample-code-text text">
             <pre> 
-              <code>
+              <code class="html">
                 function mxdiflg(a1, a2) {
                   let max = -1
                   
@@ -146,19 +165,21 @@
       </div>
     </main>
     <footer class="footer">
-      <div>
-        <a href="https://github.com/Tianika" class="github">GitHub</a>
-      </div>
-      <div>
-        <p>2021</p>
-      </div>
-      <div>
-        <a href="https://rs.school/js/" class="link"
-          ><img
-            src="https://rs.school/images/rs_school_js.svg"
-            alt="logo"
-            class="logo"
-        /></a>
+      <div class="container footer-container">
+        <div>
+          <a href="https://github.com/Tianika" class="github">GitHub</a>
+        </div>
+        <div>
+          <a href="https://rs.school/js/" class="rsschool-link"
+            ><img
+              src="https://rs.school/images/rs_school_js.svg"
+              alt="logo"
+              class="logo"
+          /></a>
+        </div>
+        <div>
+          <p class="year">2021 &copy;</p>
+        </div>
       </div>
     </footer>
     <script src="./index.js"></script>
