@@ -290,6 +290,21 @@ body {
 .spain {
   background-image: url(./png/spain-icon.png);
 }
+/*-----------PROJECTS---------*/
+.projects-title {
+}
+.projects-link {
+}
+.project-link {
+}
+.projects-text {
+}
+/*-----------SAMPLE CODE---------*/
+.sample-code-title {
+  margin-bottom: 0;
+}
+.sample-code-text {
+}
 
 /*-----------FOOTER---------*/
 .footer {
