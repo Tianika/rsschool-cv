@@ -37,22 +37,22 @@ body {
   font-family: Lato;
   scroll-behavior: smooth;
   --color1: #36caa3;
-  --color2: #f5f8e2;
-  /*#a3070b #fffcf5*/
+  --color2: #fffce6;
+  /*#a3070b #fffcf5    #4CD4B0*/
   --colorWhite: #ffffff;
 }
 
 .wrapper {
   min-height: 100%;
   overflow: hidden;
+  background-color: var(--color2);
 }
 
 .container {
   max-width: 1230px;
   margin: 0 auto;
   background-color: var(--color2);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15),
-    inset 10em 8em var(--color1, 0.3);
+  box-shadow: inset 10em 8em var(--color1, 0.3);
 }
 /*-----------MENU--------*/
 .main-menu {
@@ -89,10 +89,12 @@ body {
   font-size: 60px;
   padding: 20px 0;
   font-weight: 700;
+  letter-spacing: 2px;
 }
-.header-name::before {
-  content: 'T';
+.header-name span {
   font-size: 100px;
+  margin-left: 15px;
+
   color: var(--color1);
 }
 .header-subtitle {
@@ -100,10 +102,11 @@ body {
   font-style: italic;
   padding: 10px;
   color: var(--color1);
+  letter-spacing: 2px;
 }
 .header-photo {
   position: relative;
-  top: -20px;
+  top: -30px;
   padding: 30px;
   background-color: var(--color1);
   width: 35%;
@@ -114,12 +117,9 @@ body {
   top: 60px;
   left: 110px;
   width: 60%;
-  /*filter: grayscale(1) contrast(1.5);*/
-}
-img {
 }
 .header-contacts {
-  margin: auto 15px;
+  margin: 50px 15px 0;
   padding: 20px;
 }
 .contacts-list {
@@ -177,6 +177,7 @@ img {
 }
 .title:hover {
   font-weight: 700;
+  letter-spacing: 10px;
 }
 .about-text {
 }
@@ -187,19 +188,107 @@ img {
   padding: 5px 20px;
   padding-left: 105px;
 }
+
+/*-----------EXPERIENCE---------*/
+.experience-text li::before {
+  content: ' - ';
+  padding-right: 5px;
+}
+
+/*-----------SKILLS---------*/
+.skills-title {
+}
+
+.skill-container {
+  width: 100%;
+  background-color: var(--color2);
+}
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.skill-name p {
+  padding: 0 10px;
+}
+.skill-html {
+  width: 80%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 130%);
+}
+.skill-css {
+  width: 70%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 140%);
+}
+.skill-javascript {
+  width: 50%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 200%);
+}
+.skill-git {
+  width: 30%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 330%);
+}
+.skill-photoshop {
+  width: 90%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 110%);
+}
+.skill-figma {
+  width: 40%;
+  background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 250%);
+}
+
+/*-----------EDUCATION---------*/
+.education {
+}
+.education-title {
+}
+.education-text {
+}
+.education-text li {
+  display: flex;
+  align-items: center;
+}
 .list {
-  position: relative;
 }
-.list li {
-}
-.list li::before {
-  content: '';
-  display: inline-block;
-  width: 30px;
-  height: 30px;
+.education-icon {
+  width: 35px;
+  height: 35px;
   background-image: url(./png/free-icon-checkmark-outline-54346.png);
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 5px 15px;
+}
+.education-content {
+}
+
+/*-----------LANGUAGES---------*/
+.languages-title {
+}
+.languages-text .lang {
+  display: flex;
+  justify-content: space-around;
+}
+
+.lang div {
+  display: flex;
+  align-items: center;
+}
+.languages-icon {
+  width: 45px;
+  height: 30px;
   margin-right: 15px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.russian {
+  background-image: url(./png/russia-icon1.png);
+}
+.english {
+  background-image: url(./png/usa-icon1.png);
+}
+.spain {
+  background-image: url(./png/spain-icon.png);
 }
 
 /*-----------FOOTER---------*/
