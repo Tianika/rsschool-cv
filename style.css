@@ -38,7 +38,6 @@ body {
   scroll-behavior: smooth;
   --color1: #36caa3;
   --color2: #fffce6;
-  /*#a3070b #fffcf5    #4CD4B0*/
   --colorWhite: #ffffff;
 }
 
@@ -52,8 +51,18 @@ body {
   max-width: 1230px;
   margin: 0 auto;
   background-color: var(--color2);
-  box-shadow: inset 10em 8em var(--color1, 0.3);
+  box-shadow: inset 10em 8em var(--color1, 0.3),
+    rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px,
+    rgba(0, 0, 0, 0.15) -1.95px -1.95px 2.6px;
 }
+@media (max-width: 1024px) {
+  .container {
+    box-shadow: inset 8em 5em var(--color1, 0.3),
+      rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px,
+      rgba(0, 0, 0, 0.15) -1.95px -1.95px 2.6px;
+  }
+}
+
 /*-----------MENU--------*/
 .main-menu {
   color: var(--colorWhite);
@@ -61,7 +70,7 @@ body {
 .menu-list {
   display: flex;
   justify-content: space-around;
-  font-size: 24px;
+  font-size: 22px;
   padding: 25px 10px;
 }
 .menu-list li {
@@ -76,6 +85,17 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+@media (max-width: 1024px) {
+  .menu-list {
+    font-size: 20px;
+    padding: 15px 8px;
+  }
+  .menu-list li {
+    width: 18%;
+    padding: 10px 5px;
+  }
+}
+
 /*----------HEADER------------*/
 .header {
   display: flex;
@@ -86,7 +106,7 @@ body {
   flex: 1 1 auto;
 }
 .header-name {
-  font-size: 60px;
+  font-size: 55px;
   padding: 20px 0;
   font-weight: 700;
   letter-spacing: 2px;
@@ -94,11 +114,10 @@ body {
 .header-name span {
   font-size: 100px;
   margin-left: 15px;
-
   color: var(--color1);
 }
 .header-subtitle {
-  font-size: 50px;
+  font-size: 45px;
   font-style: italic;
   padding: 10px;
   color: var(--color1);
@@ -109,8 +128,8 @@ body {
   top: -30px;
   padding: 30px;
   background-color: var(--color1);
-  width: 35%;
-  min-height: 300px;
+  width: 400px;
+  height: 300px;
 }
 .photo {
   position: absolute;
@@ -125,12 +144,14 @@ body {
 .contacts-list {
   display: flex;
   justify-content: space-around;
+
   font-size: 20px;
   line-height: 180%;
 }
 .contacts-list li {
   display: flex;
   transition: 0.2s ease;
+  align-items: center;
 }
 .contacts-list li:hover {
   transform: scale(1.2);
@@ -152,20 +173,75 @@ body {
 .mail {
   background-image: url(./png/mail.png);
 }
+@media (max-width: 1024px) {
+  .header-name {
+    font-size: 42px;
+    padding: 20px 0;
+  }
+  .header-name span {
+    font-size: 70px;
+    margin-left: 5px;
+  }
+  .header-subtitle {
+    font-size: 35px;
+    padding: 8px;
+  }
+  .header-photo {
+    top: -10px;
+    width: 350px;
+    height: 270px;
+  }
+  .photo {
+    top: 50px;
+    left: 80px;
+    width: 60%;
+  }
+  .header-contacts {
+    margin: 30px 10px 0;
+    padding: 10px;
+  }
+  .contacts-list {
+    font-size: 18px;
+    line-height: 150%;
+  }
+}
+@media (max-width: 850px) {
+  .header-name {
+    font-size: 36px;
+    padding: 15px 0;
+  }
+  .header-name span {
+    font-size: 60px;
+  }
+  .header-subtitle {
+    font-size: 30px;
+  }
+  .header-photo {
+    top: -10px;
+    width: 300px;
+    height: 230px;
+  }
+  .header-contacts {
+    margin: 20px 10px 0;
+    padding: 7px;
+  }
+  .contacts-list {
+    font-size: 16px;
+  }
+  .contant-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 /*-----------ABOUT------------*/
-.about-title {
-}
 .title {
   text-align: left;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 100px;
-  margin-bottom: 50px;
-  font-size: 40px;
+  margin: 40px 5px 30px 5px;
+  font-size: 36px;
   font-style: italic;
   letter-spacing: 2.5px;
-  padding: 15px 15px;
+  padding: 15px;
   padding-left: 100px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   transition: 0.2s ease;
@@ -179,14 +255,45 @@ body {
   font-weight: 700;
   letter-spacing: 10px;
 }
+.about-title {
+}
 .about-text {
 }
 .text {
   margin: 0 40px;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 150%;
   padding: 5px 20px;
   padding-left: 105px;
+}
+@media (max-width: 1024px) {
+  .title {
+    margin: 50px 5px 30px 5px;
+    font-size: 30px;
+    padding: 10px 10px;
+    padding-left: 78px;
+  }
+  .title::first-letter {
+    font-size: 45px;
+    padding-right: 4px;
+  }
+  .text {
+    margin: 0 30px;
+    font-size: 20px;
+    line-height: 140%;
+    padding: 5px 15px;
+    padding-left: 100px;
+  }
+}
+@media (max-width: 850px) {
+  .title {
+    margin: 40px 5px 20px 5px;
+    font-size: 28px;
+  }
+  .text {
+    margin: 0 15px;
+    font-size: 18px;
+  }
 }
 
 /*-----------EXPERIENCE---------*/
@@ -236,6 +343,12 @@ body {
 .skill-figma {
   width: 40%;
   background: linear-gradient(90deg, var(--color2) 0%, var(--color1) 250%);
+}
+@media (max-width: 850px) {
+  .skill-name {
+    padding: 5px;
+    margin-bottom: 10px;
+  }
 }
 
 /*-----------EDUCATION---------*/
@@ -291,19 +404,76 @@ body {
   background-image: url(./png/spain-icon.png);
 }
 /*-----------PROJECTS---------*/
+.projects {
+}
 .projects-title {
 }
-.projects-link {
+.project-container {
 }
 .project-link {
+  margin-left: -70px;
+  margin-bottom: 10px;
 }
-.projects-text {
+.project-title {
+  text-align: center;
+  font-weight: 700;
 }
+.project-describe {
+  font-size: 22px;
+  padding: 5px;
+  margin-left: 40px;
+}
+@media (max-width: 1024px) {
+  .project-link {
+    margin-left: -80px;
+    margin-bottom: 10px;
+  }
+  .project-describe {
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 35px;
+  }
+}
+@media (max-width: 850px) {
+  .project-describe {
+    font-size: 18px;
+    margin-left: 25px;
+  }
+}
+
 /*-----------SAMPLE CODE---------*/
 .sample-code-title {
   margin-bottom: 0;
 }
 .sample-code-text {
+  display: flex;
+}
+pre {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  overflow-y: hidden;
+  font-size: 22px;
+  line-height: 150%;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap !important;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+@media (max-width: 1024px) {
+  pre {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 850px) {
+  pre {
+    font-size: 16px;
+    line-height: 120%;
+  }
 }
 
 /*-----------FOOTER---------*/
@@ -330,4 +500,22 @@ body {
 .logo {
   width: 60px;
   height: 60px;
+}
+@media (max-width: 1024px) {
+  .footer-container {
+    font-size: 18px;
+  }
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .footer-container {
+    font-size: 16px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
 }
