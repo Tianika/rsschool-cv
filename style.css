@@ -457,11 +457,6 @@ pre {
   overflow-y: hidden;
   font-size: 22px;
   line-height: 150%;
-  white-space: pre-wrap;
-  white-space: -moz-pre-wrap !important;
-  white-space: -pre-wrap;
-  white-space: -o-pre-wrap;
-  word-wrap: break-word;
 }
 @media (max-width: 1024px) {
   pre {
