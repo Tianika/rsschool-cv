@@ -25,6 +25,31 @@
     <div class="wrapper">
       <main class="main">
         <div class="container">
+          <nav class="burger-menu">
+            <div class="menu-icon"></div>
+            <ul class="burger-list">
+              <li>
+                <a href="#about">About me</a>
+                <div class="arrow"></div>
+              </li>
+              <li>
+                <a href="#experience">Experience</a>
+                <div class="arrow"></div>
+              </li>
+              <li>
+                <a href="#skills">Skills</a>
+                <div class="arrow"></div>
+              </li>
+              <li>
+                <a href="#education">Education</a>
+                <div class="arrow"></div>
+              </li>
+              <li>
+                <a href="#projects">Projects</a>
+                <div class="arrow"></div>
+              </li>
+            </ul>
+          </nav>
           <nav class="main-menu">
             <ul class="menu-list">
               <li><a href="#about">About me</a></li>
@@ -34,7 +59,7 @@
               <li><a href="#projects">Projects</a></li>
             </ul>
           </nav>
-          <header class="header">
+          <header class="header" id="about">
             <div class="header-photo">
               <img class="photo" src="./img/photo1.jpg" alt="photo" />
             </div>
@@ -63,9 +88,9 @@
               </div>
             </div>
           </header>
-          <section class="about" id="about">
+          <section class="about">
             <h3 class="about-title title">About me</h3>
-            <div class="about-text text">
+            <article class="about-text text">
               &laquo;I desire to learn and improve skills. I have a passion for
               technology and change in the digital environment. Desire to create
               great, simple, clean, efficient code. I likes to keep up to date
@@ -73,7 +98,7 @@
               delivering a great user experience. I can ability to communicate
               with customer in a clear, concise and courteous manner, both
               verbally and in writing.&raquo;
-            </div>
+            </article>
           </section>
           <section class="experience" id="experience">
             <h3 class="experience-title title">Experience</h3>
@@ -113,7 +138,7 @@
           <section class="skills" id="skills">
             <h3 class="skills-title title">Skills</h3>
             <div class="skills-text text">
-              <ul class="list">
+              <div class="list">
                 <div class="skill-container">
                   <div class="skill-name skill-html">
                     <p>HTML</p>
@@ -150,7 +175,7 @@
                     <p>40%</p>
                   </div>
                 </div>
-              </ul>
+              </div>
             </div>
           </section>
           <section class="education" id="education">
@@ -190,24 +215,23 @@
             <h3 class="languages-title title">Languages</h3>
             <div class="languages-text text">
               <ul class="lang">
-                <div>
+                <li>
                   <div class="languages-icon russian"></div>
-                  <li>Russian: Native</li>
-                </div>
-                <div>
+                  <div>Russian: Native</div>
+                </li>
+                <li>
                   <div class="languages-icon english"></div>
-                  <li>English: A2</li>
-                </div>
-                <div>
+                  <div>English: A2</div>
+                </li>
+                <li>
                   <div class="languages-icon spain"></div>
-                  <li>Spanish: A1</li>
-                </div>
+                  <div>Spanish: A1</div>
+                </li>
               </ul>
             </div>
           </section>
           <section class="projects" id="projects">
             <h3 class="projects-title title">Projects</h3>
-
             <div class="project-container text">
               <div class="project-link text">
                 <a
@@ -215,7 +239,7 @@
                   ><img src="./img/Screenshot-project-1.jpg" alt="project"
                 /></a>
               </div>
-              <div class="project-title">Website hours for relaxation.</div>
+              <h4 class="project-title">Website hours for relaxation.</h4>
               <div class="project-describe">
                 You can choose a background picture, sounds of nature and relax
                 watching the time pass. <br />
@@ -228,17 +252,17 @@
             <div class="sample-code-text text">
               <pre> 
                 <code>
-                  function mxdiflg(a1, a2) {
-                    let max = -1
-                    
-                    a1.forEach(a => {
-                      a2.forEach(b => {
-                        let dif = Math.abs(a.length - b.length)
-                        dif > max ? max = dif : max
-                      })
-                    })
-                    return max 
-                  }
+          function mxdiflg(a1, a2) {
+            let max = -1
+            
+            a1.forEach(a => {
+              a2.forEach(b => {
+                let dif = Math.abs(a.length - b.length)
+                dif > max ? max = dif : max
+              })
+            })
+            return max 
+          }
                 </code>
               </pre>
             </div>
