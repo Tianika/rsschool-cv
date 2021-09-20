@@ -456,6 +456,7 @@ body {
   .text {
     margin: 0 15px;
     font-size: 18px;
+    padding-left: 105px;
   }
 }
 @media (max-width: 768px) {
@@ -463,7 +464,7 @@ body {
     margin: 10px 5px 10px 5px;
     font-size: 26px;
     padding: 10px 10px;
-    padding-left: 53px;
+    padding-left: 55px;
   }
   .title::first-letter {
     font-size: 38px;
@@ -472,7 +473,7 @@ body {
   .text {
     margin: 0 5px;
     font-size: 16px;
-    padding-left: 60px;
+    padding-left: 82px;
   }
 }
 @media (max-width: 600px) {
@@ -488,6 +489,7 @@ body {
   .text {
     margin: 0 5px;
     font-size: 14px;
+    padding-left: 53px;
   }
 }
 
@@ -557,8 +559,6 @@ body {
   display: flex;
   align-items: center;
 }
-.list {
-}
 .education-icon {
   width: 35px;
   height: 35px;
@@ -582,9 +582,6 @@ body {
     height: 15px;
     margin-right: 5px;
   }
-  .education-text {
-    padding-left: 0;
-  }
 }
 
 /*-----------LANGUAGES---------*/
@@ -592,7 +589,7 @@ body {
 }
 .languages-text .lang {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .lang div {
@@ -615,47 +612,63 @@ body {
 .spain {
   background-image: url(./png/spain-icon.png);
 }
-/*-----------PROJECTS---------*/
-.projects {
-}
-.projects-title {
-}
-.project-container {
-}
-.project-link {
-  margin-left: -70px;
-  margin-bottom: 10px;
-}
-.project-title {
-  text-align: center;
-  font-weight: 700;
-}
-.project-describe {
-  font-size: 22px;
-  padding: 5px;
-  margin-left: 40px;
-}
-@media (max-width: 1024px) {
+@media (max-width: 600px) {
+  .languages-icon {
+    width: 35px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  /*-----------PROJECTS---------*/
+  .projects {
+  }
+  .projects-title {
+  }
+  .project-container {
+  }
   .project-link {
-    margin-left: -80px;
+    margin-left: -70px;
     margin-bottom: 10px;
   }
+  .project-title {
+    text-align: center;
+    font-weight: 700;
+  }
   .project-describe {
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px;
-    margin-left: 35px;
+    margin-left: 40px;
   }
-}
-@media (max-width: 850px) {
-  .project-describe {
-    font-size: 18px;
-    margin-left: 25px;
+  @media (max-width: 1024px) {
+    .project-link {
+      margin-left: -80px;
+      margin-bottom: 10px;
+    }
+    .project-describe {
+      font-size: 20px;
+      padding: 5px;
+      margin-left: 35px;
+    }
   }
-}
-@media (max-width: 768px) {
-  .project-describe {
-    font-size: 14px;
-    margin-left: 25px;
+  @media (max-width: 850px) {
+    .project-describe {
+      font-size: 18px;
+      margin-left: 25px;
+    }
+  }
+  @media (max-width: 768px) {
+    .project-describe {
+      font-size: 14px;
+      margin-left: 25px;
+    }
+  }
+  @media (max-width: 600px) {
+    .project-describe {
+      margin-left: 0;
+    }
+    .project-link {
+      margin-left: -40px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -693,6 +706,12 @@ pre {
     font-size: 14px;
   }
 }
+@media (max-width: 768px) {
+  pre {
+    font-size: 12px;
+    line-height: 110%;
+  }
+}
 
 /*-----------FOOTER---------*/
 .footer {
@@ -705,6 +724,7 @@ pre {
   font-size: 20px;
   color: var(--colorWhite);
   transition: 0.2s ease;
+  background-color: var(--color1);
 }
 .footer-container div:hover {
   transform: scale(1.2);
@@ -735,5 +755,14 @@ pre {
   .logo {
     width: 40px;
     height: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .footer-container {
+    font-size: 14px;
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
   }
 }
